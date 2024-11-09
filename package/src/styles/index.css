@@ -3,6 +3,10 @@
 
 /* CSS Variables */
 :root {
+    --calendar-day-font-size: 0.75rem;
+    --calendar-day-font-weight: 400;
+    --calendar-day-padding: 0px;
+    --calendar-day-border-radius: 0.5rem;
     --calendar-color-white: #ffffff;
     --calendar-color-slate-50: #f8fafc;
     --calendar-color-slate-100: #f1f5f9;
