@@ -64,5 +64,28 @@
     "vite-plugin-dts": "^4.3.0",
     "vite-plugin-eslint": "~1.8.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "main": "./package/dist/index.js",
+  "module": "./package/dist/index.mjs",
+  "types": "./package/dist/index.d.ts",
+  "style": "./package/dist/styles/index.css",
+  "exports": {
+    ".": {
+      "types": "./package/dist/index.d.ts",
+      "require": "./package/dist/index.js",
+      "import": "./package/dist/index.mjs",
+      "default": "./package/dist/index.mjs"
+    },
+    "./utils": {
+      "types": "./package/dist/utils/index.d.ts",
+      "require": "./package/dist/utils/index.js",
+      "import": "./package/dist/utils/index.mjs",
+      "default": "./package/dist/utils/index.mjs"
+    },
+    "./styles/*": "./package/dist/styles/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "package/dist"
+  ]
 }
