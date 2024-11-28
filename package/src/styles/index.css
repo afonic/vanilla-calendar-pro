@@ -3,7 +3,8 @@
 
 /* CSS Variables */
 :root {
-    --calendar-day-font-size: 0.75rem;
+    --calendar-day-font-size: 1rem;
+    --calendar-price-font-size: 0.75rem;
     --calendar-day-font-weight: 400;
     --calendar-day-padding: 0px;
     --calendar-day-border-radius: 0.5rem;
