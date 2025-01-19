@@ -36,14 +36,14 @@ const createYears = (self: Calendar, target?: HTMLElement) => {
   const templateYearEl = document.createElement('button');
   templateYearEl.type = 'button';
 
-  for (let i = (self.context.displayYear as number) - 7; i < (self.context.displayYear as number) + 8; i++) {
+  for (let i = self.context.displayYear - 7; i < self.context.displayYear + 8; i++) {
     const yearDisabled = i < getDate(self.context.dateMin).getFullYear() + relationshipID || i > getDate(self.context.dateMax).getFullYear();
     const yearEl = createYearEl(self, templateYearEl, selectedYear, yearDisabled, i);
     yearsEl.appendChild(yearEl);
     if (self.onCreateYearEls) self.onCreateYearEls(self, yearEl);
   }
 
-  self.context.mainElement.querySelector<HTMLElement>(`[data-vc-years-year]`)?.focus();
+  self.context.mainElement.querySelector<HTMLElement>(`[data-vc-years-year]:not([disabled])`)?.focus();
 };
 
 export default createYears;

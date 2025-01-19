@@ -6,11 +6,13 @@ const options: Options = {
   type: 'multiple',
   selectionDatesMode: 'multiple-ranged',
   disableDatesGaps: true,
-  // disableDatesPast: true,
+  disableDatesPast: true,
+  dateMin: '2021-02-01',
+  dateMax: '2025-11-30',
   displayDatesOutside: false,
   selectionTimeMode: 12,
-  selectedMonth: 5,
-  selectedYear: 2024,
+  selectedMonth: 9,
+  selectedYear: 2025,
   timeMinHour: 2,
   timeMaxHour: 20,
   timeMinMinute: 10,
@@ -69,6 +71,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSetEl = document.querySelector('#set-options');
   btnSetEl?.addEventListener('click', () => {
     calendar.set(options, { dates: false });
-    console.log(calendar);
   });
 });
